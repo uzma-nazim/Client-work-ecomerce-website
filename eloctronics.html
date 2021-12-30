@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" href="./images/logo-removebg-preview.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            max-width: 10000px;
+            /* -webkit-box-reflect:below 1px linear-gradient(transparent,transparent #0006) ; */
+            margin-bottom: 20px;
+        }
+
+
+
+        .swiper-container img {
+            /* width: 100%; */
+            width: 100% !important;
+            /* height :min-content!important; */
+            object-fit: cover !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- ///MOBILE HEADER// -->
+
+    <div id="mb-header" class="main">
+        <div class="mobile-header">
+            <div class="logo">
+
+                <a href="index.html" class="solace"> Solaca</a>
+            </div>
+            <div class="bar2" id="cross" onclick="toogleOff()">
+                <i class="fas fa-times"></i>
+            </div>
+
+
+        </div>
+        <div class="mob-ul">
+
+            <ul class="nav nav-pills mb-3 toggle-menu" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active  menu " id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                        role="tab" aria-controls="pills-home" aria-selected="true">Menu</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link  menu" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">CATEGORIES</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+
+                    <div class="menu-content">
+
+                        <ul>
+                            <li><a href="index.html"> HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT US</a></li>
+                            <li><a href="FAQS.html">FAQS</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <div class="menu-content">
+
+                        <ul>
+                            <li><a href="lighting.html">Lighting</a></li>
+                            <li><a href="eloctronics.html">eloctronics </a></li>
+                            <li><a href="grocey.html">Grocey</a></li>
+                            <li><a href="furniture.html">furtuniter</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- ///HEADEAR// -->
+
+    <div class="short-nav">
+
+        <p> <i class="fas fa-envelope-open-text"></i>solaca@gmail.com </p>
+        <p>FREE SHIPPING TO ORDERS OVER $300</p>
+        <a href="sign.html" id="signUp"> <i class="fas fa-sign-in-alt"></i>Sign Up login</a>
+    </div>
+
+
+
+
+
+
+
+    <div class="main-header">
+
+
+        <div class="logo">
+            <!-- <img src="./images/m-logo-removebg-preview.png" id="logo" width="120px" alt=""> -->
+            <a href="" class="solace"> Solaca</a>
+        </div>
+
+        <div class="pages">
+
+            <ul>
+                <li><a href="index.html"> HOME</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="FAQS.html">FAQS</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="search">
+
+            <div class="serch-icon " data-toggle="modal" data-target="#search-modal2">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart ">
+
+              
+                <a href="card.html"> <sup id="cards">0</sup> <i class="fas fa-shopping-cart"></i> <span id="cart1"> Cart : $0.00
+                </span></a>
+            </div>
+            <div class="bar" onclick="tooggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- //modal// -->
+
+    <div class="modal fade " id="search-modal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product Search Here</h5>
+
+                </div>
+
+                <div class="modal-body">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend dropinput">
+                            <button class=" serch-btn dropdown-toggle " type="button" data-toggle="dropdown"
+                                aria-expanded="false">Select a catrgory</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="eloctronics.html">Eloctronic</a>
+                                <a class="dropdown-item" href="furniture.html">Furniture</a>
+                                <a class="dropdown-item" href="lighting.html">Lighting</a>
+                                <a class="dropdown-item" href="grocey.html">Grocey</a>
+
+                            </div>
+                            <input type="text" class="form-control  srchinput"
+                                aria-label="Text input with dropdown button">
+                            <button class="srch-btn">Search <i class="fas fa-search"></i> </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ////Sub MENU/// -->
+
+    <div class="sub-menu">
+
+        <ul>
+            <li><a href="index.html">Home <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="eloctronics.html">Eloctronic</a></li>
+        </ul>
+
+    </div>
+
+
+
+    <div class="all-shop">
+        <h1>Eloctronic</h1>
+    </div>
+
+
+    <div class="cards ">
+
+        <div class="row m-0 p-2 ">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p1.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Outlet Adapter','Prize:$7.76','./eloctronics/p9.jpg','ETL Listed 3-2 Prong Grounding Outlet Adapter, JACKYLED 3 Prong to 2 Prong Adapter Converter,')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Outlet Adapter</p>
+                                <p class="p-prize">$7.96</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name:Outlet Adapter','Prize:$7.76','./eloctronics/p9.jpg','ETL Listed 3-2 Prong Grounding Outlet Adapter, JACKYLED 3 Prong to 2 Prong Adapter Converter,')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p2.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Lighting Keyboard','Prize:$9806','./eloctronics/p2.jpg','ROCCAT Vulcan 121 Mechanical PC Tactile Gaming Keyboard, Titan Switch, AIMO RGB Backlit Lighting Per Key, ')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Lighting Keyboard</p>
+                                <p class="p-prize">$89,86</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name:Lighting Keyboard','Prize:$9806','./eloctronics/p2.jpg','ROCCAT Vulcan 121 Mechanical PC Tactile Gaming Keyboard, Titan Switch, AIMO RGB Backlit Lighting Per Key, ')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p3.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:>Optical Mouse','Prize:$51','./eloctronics/p3.jpg','Targus Wireless Bluetooth Mouse with 1,600 DPI Optical Sensor, 4.1 Inch 2.3 Inch 1.1 Inch, Black (AMB580TT), ')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Optical Mouse </p>
+                                <p class="p-prize">$51</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name:Optical Mouse','Prize:$51','./eloctronics/p3.jpg','Targus Wireless Bluetooth Mouse with 1,600 DPI Optical Sensor, 4.1 Inch 2.3 Inch 1.1 Inch, Black (AMB580TT), ')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="eloctronics/p4.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Braces speaker','Prize:$10.9','eloctronics/p4.jpg','Bluetooth Speaker, Portable Wireless Speakers with Lights, 2 Double Subwoofer')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Braces speaker</p>
+                                <p class="p-prize">$10.96</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name:Braces speaker','Prize:$10.9','eloctronics/p4.jpg','Bluetooth Speaker, Portable Wireless Speakers with Lights, 2 Double Subwoofer')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="row m-0 p-2 ">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p5.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Sanrock U52','Prize:$7.96','./eloctronics/p1,p4.jpg','SANROCK U52 Drone with 1080P HD Camera for Adults Kids, WiFi Live Video FPV Drones RC Quadcopters ')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Sanrock U52</p>
+                                <p class="p-prize">$55.6</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Sanrock U52','Prize:$7.96','./eloctronics/p5.jpg','SANROCK U52 Drone with 1080P HD Camera for Adults Kids, WiFi Live Video FPV Drones RC Quadcopters ')"
+                                id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p6.jpg"
+                                onclick="modalProduct('Name:Beats Buds','Prize$67,106','./eloctronics/p6.jpg','Beats Studio Buds – True Wireless Noise Cancelling Earbuds – Compatible with Apple & Android, ')"
+                                data-target="#productModal" data-toggle="modal" class="card-img-top img-fluid"
+                                alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Beats Buds</p>
+                                <p class="p-prize">$67,10</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Beats Buds','Prize$67,106','./eloctronics/p6.jpg','Beats Studio Buds – True Wireless Noise Cancelling Earbuds – Compatible with Apple & Android, ')"
+                                id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p7.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Smart Watc','Prize: $46.96','./eloctronics/p7.jpg','Fitbit Versa 2 Health and Fitness Smartwatch with Heart Rate, Music, Alexa Built-In, Sleep and Swim Tracking, Petal/Copper Rose, One Size (S and L Bands Included) ')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Smart Watch</p>
+                                <p class="p-prize">$46.96</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:Smart Watch','Prize: $46.96','./eloctronics/p7.jpg','Fitbit Versa 2 Health and Fitness Smartwatch with Heart Rate, Music, Alexa Built-In, Sleep and Swim Tracking, Petal/Copper Rose, One Size (S and L Bands Included) ')"
+                                id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p8.jpg" data-target="#productModal" data-toggle="modal"
+                                onclick="modalProduct('Name:3D Glasses','Prize: $46.96','./eloctronics/p8.jpg','4 Pieces 3D Movie Game Glasses 3D Style Glasses for 3D Movies Games  ')"
+                                class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">3D Glasses</p>
+                                <p class="p-prize">$434.76</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name:3D Glasses','Prize: $46.96','./eloctronics/p8.jpg','4 Pieces 3D Movie Game Glasses 3D Style Glasses for 3D Movies Games  ')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="row m-0 p-2 ">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p9.jpg"
+                                onclick="modalProduct('Name: Plug Adapter M8','Prize: $$96','./eloctronics/p9.jpg','[2-Pack] European Travel Plug Adapter, VINTAR International Power Adaptor with 2 USB Ports,2 American  ')"
+                                data-target="#productModal" data-toggle="modal" class="card-img-top img-fluid"
+                                alt="...">
+                            <div class="discription">
+                                <p class="p-nam"> Plug Adapter M8</p>
+                                <p class="p-prize">$96</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html"
+                                onclick="modalProduct('Name: Plug Adapter M8','Prize: $$96','./eloctronics/p9.jpg','[2-Pack] European Travel Plug Adapter, VINTAR International Power Adaptor with 2 USB Ports,2 American  ')"
+                                data-target="#productModal" data-toggle="modal" id="see" class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p15.jpg"
+                                onclick="modalProduct('Name: Heater, 1.7 L','Prize:$109','./eloctronics/p15.jpg','Hamilton Beach Electric Tea Kettle, Water Boiler & Heater, 1.7 L, Cordless, Auto-Shutoff and Boil-Dry Protection, Stainless Steel (40880) ')"
+                                data-target="#productModal" data-toggle="modal" class="card-img-top img-fluid"
+                                alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Heater, 1.7 L</p>
+                                <p class="p-prize">$109</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal" id="see"
+                            onclick="modalProduct('Name: Heater, 1.7 L','Prize:$109','./eloctronics/p15.jpg','Hamilton Beach Electric Tea Kettle, Water Boiler & Heater, 1.7 L, Cordless, Auto-Shutoff and Boil-Dry Protection, Stainless Steel (40880) ')"   class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p14.jpg" data-target="#productModal" data-toggle="modal" id="see"
+                            onclick="modalProduct('Name: Electric Guitar 39 ','Prize:$9.96','./eloctronics/p14.jpg','LyxPro 39 inch Electric Guitar Kit Bundle with 20w Amplifier, All Accessories, Digital Clip On Tuner, Six')" class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Electric Guitar 39 </p>
+                                <p class="p-prize">$9.96</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal" id="see"
+                            onclick="modalProduct('Name: Electric Guitar 39 ','Prize:$9.96','./eloctronics/p14.jpg','LyxPro 39 inch Electric Guitar Kit Bundle with 20w Amplifier, All Accessories, Digital Clip On Tuner, Six')"  class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 animatocol    ">
+                <div class="display m-1 ">
+                    <span></span><span></span><span></span><span></span>
+                    <div class="card m-0 p-0 m-0" style="width: 100%;">
+
+
+                        <div class="card-body ">
+                            <img src="./eloctronics/p13.jpg" data-target="#productModal" data-toggle="modal" id="see"
+                            onclick="modalProduct('Name:Heated Electric Blanket','Prize:$6000','./eloctronics/p13.jpg','Beurer HD71 Heated Electric Blanket | Cozy-Soft Fleece Throw, Auto shut-off, 50” x 60” in (Adult Size) ')" class="card-img-top img-fluid" alt="...">
+                            <div class="discription">
+                                <p class="p-nam">Heated Electric Blanket</p>
+                                <p class="p-prize">$6000</p>
+                            </div>
+                            <div class="star ">
+                                <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                        class="far fa-star"></i>(0)</p>
+                            </div>
+                            <a href="shop.html" data-target="#productModal" data-toggle="modal" id="see"
+                            onclick="modalProduct('Name:Heated Electric Blanket','Prize:$6000','./eloctronics/p13.jpg','Beurer HD71 Heated Electric Blanket | Cozy-Soft Fleece Throw, Auto shut-off, 50” x 60” in (Adult Size) ')"  class="seemore "> See more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="shop-paginatoin">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="shop.html" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="eloctronics.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="furniture.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="lighting.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="lighting.html">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="furniture.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <!-- ///Footer/// -->
+
+
+    <footer>
+
+        <div class="mainfooter">
+
+            <div class="footer-logo ">
+                <a href="index.html" class="solace">Solace</a><br>
+                <p>Trusted Online Seller</p>
+
+                <ul>
+                    <li><a href="#"></a><i class="fas fa-map-marker-alt"></i> Store Address</li>
+                    <li>823 shippen st Lancaster PA 17602</li>
+                    <li>(+1) 917 983 6161</li>
+                    <li><a href="mailto:Solace@gmail.com">Solace@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="top-cat">
+                <ul>
+                    <li>
+                        <h4>TOP CATEGORIES</h4>
+                    </li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="grocey.html">Grocery</a></li>
+                    <li><a href="eloctronics.html">Electronics</a></li>
+                    <li><a href="lighting.html">Lighting</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+
+                </ul>
+            </div>
+            <div class="information">
+                <ul>
+                    <li>
+                        <h4>INFORMATION</h4>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Conatct Us</a></li>
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="sign.html">Login /Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="my-account">
+
+                <ul>
+                    <li>
+                        <h4>MY ACCOUNT</h4>
+                    </li>
+                    <li><a href="">Cart</a></li>
+                    <li><a href="sign.html">My ACcount</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <div class="last-footer">
+        <div class="copy">
+            <p>&copy; 2020 Solace All Rights Reserved.</p>
+        </div>
+        <div class="logo">
+            <img src="./images/visa-removebg-preview.png" width="70px" alt="">
+            &nbsp; &nbsp; <img src="./images/paypal-removebg-preview.png" width="70px" alt="">
+            &nbsp; &nbsp; <img src="./images/master-card-removebg-preview.png" width="70px" alt="">
+            &nbsp; &nbsp; <img src="./images/discover-logo-removebg-preview.png" width="70px" alt="">
+        </div>
+    </div>
+
+    <div class="mobile-footer">
+
+
+
+        <div class="footer-icon">
+
+            <div class="home">
+                <a href="index.html"><i class="fas fa-home"></i> <br>Home</a>
+            </div>
+            <div class="shopping-cart">
+                <a href="shop.html"><i class="fas fa-shopping-bag"></i><br>Veiw Bag</a>
+            </div>
+
+            <div class="caall">
+                <a href="shop.html"><i class="fas fa-shopping-cart"></i> <br>Shop</a>
+            </div>
+
+            <div class="Account">
+                <a href="sign.html"><i class="fas fa-user"></i> <br>Account</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- /////porduct MODAl/// -->
+
+
+    <div class="modal fade" tabindex="-1" id="productModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class=" row m-0 modalBox">
+
+                        <div class="product-img col-lg-6">
+
+                            <img src="./eloctronics/p13.jpg" id="modal-img" alt="">
+
+
+
+
+                        </div>
+
+
+
+                        <div class="product-details col-lg-6">
+                            <h2 id="productdata">SANROCK U52 Drone with 1080P HD Camera for Adults Kids, WiFi Live Video
+                                FPV Drones
+                                RC Quadcopters for Beginners, Gesture Control, Gravity Sensor, Altitude Hold, 3D
+                                Flip, Custom Route, One Key Backward</h2>
+                            <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i>(<span id="zero">0</span> Coustumer Reveiw) | sold</p>
+                            <hr>
+                            <p id="modalPrize" class="prize"> $7.89</p>
+                            <p id="modal-p-name" class="p-nam">Outlet Adapter</p>
+                            <p class="stock">3000 in stock</p>
+                            <hr>
+
+
+                            <div class="btns">
+                                <div class="increment">
+                                    <button onclick="dccre()" class="plus">-</button>
+                                    <button id="num" class="number">1</button>
+                                    <button onclick="incre()" id="plus1" class="plus">+</button>
+                                </div>
+                                <button class="buyNow">Buy Now</button>
+                                <button class="Addtocart" onclick="addtoCard()">Add to Cart</button>
+                            </div>
+
+                            <hr>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="reveiw-section col-lg-6">
+                            <div class="rewiew">
+
+                                <h5>ADD A REVIEW</h5>
+                                <hr>
+
+                            </div>
+
+
+
+                            <form action="javascript:void(0)">
+
+                                <div class="form-group">
+                                    <label for="reweiw">Your review <span class="staric">*</span> </label>
+                                    <textarea name="" class="form-control" id="reweiw" cols="62" rows="5"></textarea>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address <span class="staric">*</span></label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted"> Your email address will not
+                                        be published. Required fields are marked.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Name <span class="staric">*</span></label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                </div>
+
+
+
+                                <button onclick="userrew()" class="buyNow">Submit</button>
+                            </form>
+
+
+                        </div>
+
+
+                        <div class="user-reveiw  col-lg-6">
+                            <div class="headindrew">
+                                <h5>REVIEWS</h5>
+                                <hr>
+                                <small id="norew">There are no reviews yet.</small>
+                            </div>
+
+                            <div id="rewdata">
+                                <!-- 
+                            <div class="reveiw">
+                                    <div class="fas fa-user">
+
+                                      
+                                    </div>
+                                    <div class="rweiwTex">
+                                        <h5>Uzma</h5>
+                                        <p>Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
+                                            temporibus suscipit officia excepturi. Fugit quam iusto porro? Quasi
+                                            optio quidem incidunt, reiciendis magnam similique, nam consequatur
+                                            commodi non doloribus praesentium voluptates repellat officiis culpa
+                                            mollitia voluptate ipsa. Autem, quos? Beatae velit accusamus nihil
+                                            itaque eum! ipsum dolor sit amet.</p>
+                                           <a href="">Remove</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
+
+<!-- just for 3d cube -->
+<script>
+
+
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+
+        loop: true,
+        autoplay: {
+            delay: 900,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+
+</html>
