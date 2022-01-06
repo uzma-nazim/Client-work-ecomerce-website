@@ -772,6 +772,7 @@ footer{
     font-size: 20px;
     background-color: transparent!important;
     color: #CA060A !important;
+    text-transform: uppercase !important;
     
 }
 .mob-ul{
@@ -787,9 +788,9 @@ footer{
 .menu-content ul li {
     list-style: none;
     border-bottom:1px solid #444444 ;
+    text-transform: uppercase ;
 }
 .menu-content ul li a{
-    
     color: #E1E2E6;
 
 }

@@ -244,10 +244,8 @@ function addtoCard() {
 
 
 //htlm tr
-var htmltr  = document.getElementById("htmltr1")
-console.log(htmltr)
-var get1 = document.getElementById("empty")
-console.log(get1)
+var htmltr1  = document.querySelector("#htmltr1")
+console.log(htmltr1)
 
 
 }
